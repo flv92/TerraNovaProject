@@ -156,10 +156,10 @@ public class BlockTerraNovaPortal extends BlockPortal {
                 EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
                 if (thePlayer.dimension != 2)
                 {
-                    thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 2, new TerraNovaTeleporter(DimensionManager.getWorld(2)));
+                    thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 2, new TerraNovaTeleporter(thePlayer.mcServer.worldServerForDimension(2)));
                 } else
                 {
-                    thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new TerraNovaTeleporter(DimensionManager.getWorld(0)));
+                    thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new TerraNovaTeleporter(thePlayer.mcServer.worldServerForDimension(0)));
                 }
             }
         }

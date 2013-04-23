@@ -48,9 +48,8 @@ public class Dinosaurus {
      */
     LanguageRegistry language = LanguageRegistry.instance();
     /**
-     * A simple SidedProxy.
-     * fr.terranova.flv92.dinosaurus.DinoClientProxy client-side
-     * fr.terranova.flv92.dinosaurus.DinoCommonProxy server-side
+     * A simple SidedProxy. fr.terranova.flv92.dinosaurus.DinoClientProxy
+     * client-side fr.terranova.flv92.dinosaurus.DinoCommonProxy server-side
      */
     @SidedProxy(clientSide = "fr.terranova.flv92.dinosaurus.proxy.DinoClientProxy", serverSide = "fr.terranova.flv92.dinosaurus.proxy.DinoCommonProxy")
     public static DinoCommonProxy proxy;
@@ -112,7 +111,9 @@ public class Dinosaurus {
     public static final Block blockHugeThinTreeLog2 = new BlockHugeThinTreeLog(169, 1).setBlockName("blockLog").setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setCreativeTab(customTab);
     public static final Block blockHugeThinTreeLog3 = new BlockHugeThinTreeLog(170, 2).setBlockName("blockLog").setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setCreativeTab(customTab);
     public static final BlockLeaves blockHugeThinTreeLeaves = (BlockLeaves) (new BlockBigTreeLeave(171, 21)).setCreativeTab(customTab).setBlockName("blockLeaves").setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setRequiresSelfNotify();
-    public static final BlockTerraNovaPortal terraNovaPortal = (BlockTerraNovaPortal)(new BlockTerraNovaPortal(172,Block.ice.blockIndexInTexture)).setHardness(-1.0F).setLightValue(0.75F).setCreativeTab(customTab).setBlockName("terraNovaPortal");
+    public static final BlockTerraNovaPortal terraNovaPortal = (BlockTerraNovaPortal) (new BlockTerraNovaPortal(172, Block.ice.blockIndexInTexture)).setHardness(-1.0F).setLightValue(0.75F).setCreativeTab(customTab).setBlockName("terraNovaPortal");
+    public static final BiomeGenBase biomeDinoPlains = new BiomeGenDinoPlains(150);
+    public static final BiomeGenBase biomeDinoHighlands = new BiomeGenDinoHighlands(151);
 
     /**
      * Forge method, called at the beginning, before the initialization phase
@@ -209,8 +210,8 @@ public class Dinosaurus {
         GameRegistry.removeBiome(BiomeGenBase.beach);
         GameRegistry.removeBiome(BiomeGenBase.plains);
         GameRegistry.removeBiome(BiomeGenBase.icePlains);
-        GameRegistry.addBiome(new BiomeGenDinoPlains(150));
-        GameRegistry.addBiome(new BiomeGenDinoHighlands(151));
+        GameRegistry.addBiome(biomeDinoPlains);
+        GameRegistry.addBiome(biomeDinoHighlands);
 
         BiomeGenBase.ocean.setColor(16421912);
         BiomeGenBase.ocean.waterColorMultiplier = 39219;
@@ -259,7 +260,7 @@ public class Dinosaurus {
         GameRegistry.registerBlock(blockHugeThinTreeLog3, "blockhugeThinTreeLog3");
         GameRegistry.registerBlock(blockHugeThinTreeLeaves, "blockHugeThinTreeLeave");
         GameRegistry.registerBlock(terraNovaPortal, "terraNovaPortal");
-        
+
         DimensionManager.registerProviderType(2, TerraNovaWorldProvider.class, false);
         DimensionManager.registerDimension(2, 2);
 

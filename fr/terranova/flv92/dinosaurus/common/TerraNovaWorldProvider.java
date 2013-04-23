@@ -17,7 +17,7 @@ public class TerraNovaWorldProvider extends WorldProvider {
 
     @Override
     public void registerWorldChunkManager() {
-        this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.plains, 1.0F, 0.0F);
+        this.worldChunkMgr = new WorldChunkManagerHell(Dinosaurus.biomeDinoPlains, 1.0F, 0.0F);
         this.dimensionId = 2; // This is the main line I'm showing. You can set up everything else how ever you want.
     }
     
