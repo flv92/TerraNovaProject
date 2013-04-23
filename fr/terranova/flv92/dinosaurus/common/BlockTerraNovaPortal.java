@@ -3,7 +3,9 @@ package fr.terranova.flv92.dinosaurus.common;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPortal;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.world.World;
+import net.minecraftforge.common.DimensionManager;
 
 /**
  * @author Flv92
@@ -91,6 +93,10 @@ public class BlockTerraNovaPortal extends BlockPortal {
      * neighbor blockID
      */
     public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5) {
+        if(1==1)
+        {
+            return;
+        }
         byte var6 = 0;
         byte var7 = 1;
 
@@ -145,13 +151,16 @@ public class BlockTerraNovaPortal extends BlockPortal {
     public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity) {
         if (par5Entity.ridingEntity == null && par5Entity.riddenByEntity == null)
         {
-            if (par5Entity.dimension == 0)
+            if (par5Entity instanceof EntityPlayerMP)
             {
-                par5Entity.travelToDimension(2);
-            }
-            else
-            {
-                par5Entity.travelToDimension(0);
+                EntityPlayerMP thePlayer = (EntityPlayerMP) par5Entity;
+                if (thePlayer.dimension != 2)
+                {
+                    thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 2, new TerraNovaTeleporter(DimensionManager.getWorld(2)));
+                } else
+                {
+                    thePlayer.mcServer.getConfigurationManager().transferPlayerToDimension(thePlayer, 0, new TerraNovaTeleporter(DimensionManager.getWorld(0)));
+                }
             }
         }
     }
