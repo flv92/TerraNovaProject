@@ -99,9 +99,9 @@ public class TerraNovaTeleporter extends Teleporter {
 
                     for (int var26 = this.field_85192_a.getActualHeight() - 1; var26 >= 0; --var26)
                     {
-                        if (this.field_85192_a.getBlockId(var48, var26, var23) == Block.portal.blockID)
+                        if (this.field_85192_a.getBlockId(var48, var26, var23) == Block.sandStone.blockID)
                         {
-                            while (this.field_85192_a.getBlockId(var48, var26 - 1, var23) == Block.portal.blockID)
+                            while (this.field_85192_a.getBlockId(var48, var26 - 1, var23) == Block.sandStone.blockID)
                             {
                                 --var26;
                             }
@@ -135,22 +135,22 @@ public class TerraNovaTeleporter extends Teleporter {
             var27 = (double) var14 + 0.5D;
             int var50 = -1;
 
-            if (this.field_85192_a.getBlockId(var12 - 1, var13, var14) == Block.portal.blockID)
+            if (this.field_85192_a.getBlockId(var12 - 1, var13, var14) == Block.sandStone.blockID)
             {
                 var50 = 2;
             }
 
-            if (this.field_85192_a.getBlockId(var12 + 1, var13, var14) == Block.portal.blockID)
+            if (this.field_85192_a.getBlockId(var12 + 1, var13, var14) == Block.sandStone.blockID)
             {
                 var50 = 0;
             }
 
-            if (this.field_85192_a.getBlockId(var12, var13, var14 - 1) == Block.portal.blockID)
+            if (this.field_85192_a.getBlockId(var12, var13, var14 - 1) == Block.sandStone.blockID)
             {
                 var50 = 3;
             }
 
-            if (this.field_85192_a.getBlockId(var12, var13, var14 + 1) == Block.portal.blockID)
+            if (this.field_85192_a.getBlockId(var12, var13, var14 + 1) == Block.sandStone.blockID)
             {
                 var50 = 1;
             }
@@ -444,7 +444,7 @@ public class TerraNovaTeleporter extends Teleporter {
                     var23 = var15 + var21;
                     var24 = var16 + (var20 - 1) * var18;
                     var33 = var20 == 0 || var20 == 3 || var21 == -1 || var21 == 3;
-                    this.field_85192_a.setBlockWithNotify(var22, var23, var24, var33 ? Block.portal.blockID : Block.portal.blockID);
+                    this.field_85192_a.setBlockWithNotify(var22, var23, var24, var33 ? Block.sandStone.blockID : Block.sandStone.blockID);
                 }
             }
 

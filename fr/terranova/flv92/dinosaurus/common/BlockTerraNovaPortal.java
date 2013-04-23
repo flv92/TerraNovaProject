@@ -2,6 +2,7 @@ package fr.terranova.flv92.dinosaurus.common;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPortal;
+import net.minecraft.entity.Entity;
 import net.minecraft.world.World;
 
 /**
@@ -136,6 +137,21 @@ public class BlockTerraNovaPortal extends BlockPortal {
             } else
             {
                 par1World.setBlockWithNotify(par2, par3, par4, 0);
+            }
+        }
+    }
+
+    @Override
+    public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity) {
+        if (par5Entity.ridingEntity == null && par5Entity.riddenByEntity == null)
+        {
+            if (par5Entity.dimension == 0)
+            {
+                par5Entity.travelToDimension(2);
+            }
+            else
+            {
+                par5Entity.travelToDimension(0);
             }
         }
     }

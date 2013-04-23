@@ -112,7 +112,7 @@ public class Dinosaurus {
     public static final Block blockHugeThinTreeLog2 = new BlockHugeThinTreeLog(169, 1).setBlockName("blockLog").setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setCreativeTab(customTab);
     public static final Block blockHugeThinTreeLog3 = new BlockHugeThinTreeLog(170, 2).setBlockName("blockLog").setHardness(2.0F).setStepSound(Block.soundWoodFootstep).setCreativeTab(customTab);
     public static final BlockLeaves blockHugeThinTreeLeaves = (BlockLeaves) (new BlockBigTreeLeave(171, 21)).setCreativeTab(customTab).setBlockName("blockLeaves").setHardness(0.2F).setLightOpacity(1).setStepSound(Block.soundGrassFootstep).setRequiresSelfNotify();
-    public static final Block terraNovaPortal = (new BlockTerraNovaPortal(172,Block.ice.blockIndexInTexture)).setCreativeTab(customTab).setBlockName("terraNovaPortal");
+    public static final BlockTerraNovaPortal terraNovaPortal = (BlockTerraNovaPortal)(new BlockTerraNovaPortal(172,Block.ice.blockIndexInTexture)).setHardness(-1.0F).setLightValue(0.75F).setCreativeTab(customTab).setBlockName("terraNovaPortal");
 
     /**
      * Forge method, called at the beginning, before the initialization phase
@@ -127,7 +127,7 @@ public class Dinosaurus {
         log("Starting PreInitialization of Dinosaurus v" + version);
         proxy.registerSound();
         MinecraftForge.TERRAIN_GEN_BUS.register(new BiomeSizeHandler());
-        MinecraftForge.TERRAIN_GEN_BUS.register(new InitBiomeGenHandler());
+        MinecraftForge.EVENT_BUS.register(new FirePlacedEvent());
         config = new Configuration(event.getSuggestedConfigurationFile());
         log("Loading Dinosaurus.cfg config file");
         config.load();
