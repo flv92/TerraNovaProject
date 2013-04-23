@@ -7,4 +7,8 @@ Official source code of minecraft TerraNovaProject
 Made for minecraft 1.4.7 with forge
 
 ================
-Actual work: Creating a new dimension
+TODO THINGS:
+Register a new dimension: registered
+Use a portal to travel to it: done
+Improve the dimension: WIP
+
