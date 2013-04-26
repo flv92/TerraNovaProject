@@ -24,6 +24,9 @@ public class AluminiumWorldGenerator implements IWorldGenerator {
             case 1:
                 generateEnd();
                 break;
+            case 2:
+                generateTerraNova(world, random, chunkX * 16, chunkZ * 16);
+                break;
         }
     }
 
@@ -32,6 +35,13 @@ public class AluminiumWorldGenerator implements IWorldGenerator {
     }
 
     public void generateSurface(World world, Random rand, int chunkX, int chunkZ) {
+    }
+
+    public void generateEnd() {
+//we're not going to generate in the end either
+    }
+
+    private void generateTerraNova(World world, Random rand, int chunkX, int chunkZ) {
         for (int i = 0; i < 30; i++)
         {
             int randPosX = chunkX + rand.nextInt(16);
@@ -55,15 +65,11 @@ public class AluminiumWorldGenerator implements IWorldGenerator {
             {
                 var3 = chunkX + rand.nextInt(16) + 8;
                 var4 = chunkZ + rand.nextInt(16) + 8;
-                if("Dino - Plains".equals(world.getBiomeGenForCoords(var3, var4).biomeName))
+                if ("Dino - Plains".equals(world.getBiomeGenForCoords(var3, var4).biomeName))
                 {
                     (new WorldGenDinoTrees()).generate(world, rand, var3, world.getHeightValue(var3, var4), var4);
                 }
             }
         }
-    }
-
-    public void generateEnd() {
-//we're not going to generate in the end either
     }
 }

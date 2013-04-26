@@ -16,7 +16,7 @@ public class FirePlacedEvent {
     public void onBlockClicked(PlayerInteractEvent event) {
         if (event.action == Action.RIGHT_CLICK_BLOCK)
         {
-            World w = DimensionManager.getWorld(0);
+            World w = DimensionManager.getWorld(event.entityPlayer.dimension);
             if (w.getBlockId(event.x, event.y, event.z) == Block.sandStone.blockID)
             {
                 Dinosaurus.terraNovaPortal.tryToCreatePortal(w, event.x, event.y + 1, event.z);

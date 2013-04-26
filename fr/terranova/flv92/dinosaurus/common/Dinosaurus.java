@@ -190,70 +190,71 @@ public class Dinosaurus {
         GameRegistry.registerBlock(aluminiumOre, "aluminiumOre");
         GameRegistry.addSmelting(aluminiumOre.blockID, new ItemStack(aluminiumIngot, 1), 1.0F);
         GameRegistry.registerWorldGenerator(new AluminiumWorldGenerator());
-        GameRegistry.removeBiome(BiomeGenBase.desert);
-        GameRegistry.removeBiome(BiomeGenBase.desertHills);
-        GameRegistry.removeBiome(BiomeGenBase.extremeHills);
-        GameRegistry.removeBiome(BiomeGenBase.extremeHillsEdge);
-        GameRegistry.removeBiome(BiomeGenBase.forest);
-        GameRegistry.removeBiome(BiomeGenBase.forestHills);
-        GameRegistry.removeBiome(BiomeGenBase.frozenRiver);
-        GameRegistry.removeBiome(BiomeGenBase.iceMountains);
-        GameRegistry.removeBiome(BiomeGenBase.icePlains);
-        GameRegistry.removeBiome(BiomeGenBase.jungle);
-        GameRegistry.removeBiome(BiomeGenBase.jungleHills);
-        GameRegistry.removeBiome(BiomeGenBase.swampland);
-        GameRegistry.removeBiome(BiomeGenBase.taiga);
-        GameRegistry.removeBiome(BiomeGenBase.taigaHills);
-        GameRegistry.removeBiome(BiomeGenBase.forest);
-        GameRegistry.removeBiome(BiomeGenBase.river);
-        GameRegistry.removeBiome(BiomeGenBase.ocean);
-        GameRegistry.removeBiome(BiomeGenBase.beach);
-        GameRegistry.removeBiome(BiomeGenBase.plains);
-        GameRegistry.removeBiome(BiomeGenBase.icePlains);
+        /*GameRegistry.removeBiome(BiomeGenBase.desert);
+         GameRegistry.removeBiome(BiomeGenBase.desertHills);
+         GameRegistry.removeBiome(BiomeGenBase.extremeHills);
+         GameRegistry.removeBiome(BiomeGenBase.extremeHillsEdge);
+         GameRegistry.removeBiome(BiomeGenBase.forest);
+         GameRegistry.removeBiome(BiomeGenBase.forestHills);
+         GameRegistry.removeBiome(BiomeGenBase.frozenRiver);
+         GameRegistry.removeBiome(BiomeGenBase.iceMountains);
+         GameRegistry.removeBiome(BiomeGenBase.icePlains);
+         GameRegistry.removeBiome(BiomeGenBase.jungle);
+         GameRegistry.removeBiome(BiomeGenBase.jungleHills);
+         GameRegistry.removeBiome(BiomeGenBase.swampland);
+         GameRegistry.removeBiome(BiomeGenBase.taiga);
+         GameRegistry.removeBiome(BiomeGenBase.taigaHills);
+         GameRegistry.removeBiome(BiomeGenBase.forest);
+         GameRegistry.removeBiome(BiomeGenBase.river);
+         GameRegistry.removeBiome(BiomeGenBase.ocean);
+         GameRegistry.removeBiome(BiomeGenBase.beach);
+         GameRegistry.removeBiome(BiomeGenBase.plains);
+         GameRegistry.removeBiome(BiomeGenBase.icePlains);
+         GameRegistry.addBiome(biomeDinoPlains);
+         GameRegistry.addBiome(biomeDinoHighlands);
+
+         BiomeGenBase.ocean.setColor(16421912);
+         BiomeGenBase.ocean.waterColorMultiplier = 39219;
+         BiomeGenBase.ocean.setBiomeName("Dino - Ocean");
+         BiomeGenBase.ocean.temperature = 2.0F;
+         BiomeGenBase.ocean.rainfall = 2.0F;
+
+         BiomeGenBase.river.setColor(16421912);
+         BiomeGenBase.river.waterColorMultiplier = 39219;
+         BiomeGenBase.river.setBiomeName("Dino - River");
+         BiomeGenBase.river.temperature = 2.0F;
+         BiomeGenBase.river.rainfall = 2.0F;
+
+         BiomeGenBase.beach.setColor(16421912);
+         BiomeGenBase.beach.waterColorMultiplier = 39219;
+         BiomeGenBase.beach.setBiomeName("Dino - Beach");
+         BiomeGenBase.beach.temperature = 2.0F;
+         BiomeGenBase.beach.rainfall = 2.0F;
+
+         BiomeGenBase.frozenRiver.setColor(16421912);
+         BiomeGenBase.frozenRiver.waterColorMultiplier = 39219;
+         BiomeGenBase.frozenRiver.setBiomeName("Dino - RiverF");
+         BiomeGenBase.frozenRiver.temperature = 2.0F;
+         BiomeGenBase.frozenRiver.rainfall = 2.0F;
+
+         BiomeGenBase.iceMountains.setColor(16421912);
+         BiomeGenBase.iceMountains.waterColorMultiplier = 39219;
+         BiomeGenBase.iceMountains.setBiomeName("Dino - MountainsI");
+         BiomeGenBase.iceMountains.temperature = 2.0F;
+         BiomeGenBase.iceMountains.rainfall = 2.0F;
+
+         BiomeGenBase.icePlains.setColor(16421912);
+         BiomeGenBase.icePlains.waterColorMultiplier = 39219;
+         BiomeGenBase.icePlains.setBiomeName("Dino - PlainsI");
+         BiomeGenBase.icePlains.temperature = 2.0F;
+         BiomeGenBase.icePlains.rainfall = 2.0F;
+
+         BiomeGenBase.plains.setColor(16421912);
+         BiomeGenBase.plains.waterColorMultiplier = 39219;
+         BiomeGenBase.plains.setBiomeName("Dino - Plains");
+         BiomeGenBase.plains.temperature = 2.0F;
+         BiomeGenBase.plains.rainfall = 2.0F;*/
         GameRegistry.addBiome(biomeDinoPlains);
-        GameRegistry.addBiome(biomeDinoHighlands);
-
-        BiomeGenBase.ocean.setColor(16421912);
-        BiomeGenBase.ocean.waterColorMultiplier = 39219;
-        BiomeGenBase.ocean.setBiomeName("Dino - Ocean");
-        BiomeGenBase.ocean.temperature = 2.0F;
-        BiomeGenBase.ocean.rainfall = 2.0F;
-
-        BiomeGenBase.river.setColor(16421912);
-        BiomeGenBase.river.waterColorMultiplier = 39219;
-        BiomeGenBase.river.setBiomeName("Dino - River");
-        BiomeGenBase.river.temperature = 2.0F;
-        BiomeGenBase.river.rainfall = 2.0F;
-
-        BiomeGenBase.beach.setColor(16421912);
-        BiomeGenBase.beach.waterColorMultiplier = 39219;
-        BiomeGenBase.beach.setBiomeName("Dino - Beach");
-        BiomeGenBase.beach.temperature = 2.0F;
-        BiomeGenBase.beach.rainfall = 2.0F;
-
-        BiomeGenBase.frozenRiver.setColor(16421912);
-        BiomeGenBase.frozenRiver.waterColorMultiplier = 39219;
-        BiomeGenBase.frozenRiver.setBiomeName("Dino - RiverF");
-        BiomeGenBase.frozenRiver.temperature = 2.0F;
-        BiomeGenBase.frozenRiver.rainfall = 2.0F;
-
-        BiomeGenBase.iceMountains.setColor(16421912);
-        BiomeGenBase.iceMountains.waterColorMultiplier = 39219;
-        BiomeGenBase.iceMountains.setBiomeName("Dino - MountainsI");
-        BiomeGenBase.iceMountains.temperature = 2.0F;
-        BiomeGenBase.iceMountains.rainfall = 2.0F;
-
-        BiomeGenBase.icePlains.setColor(16421912);
-        BiomeGenBase.icePlains.waterColorMultiplier = 39219;
-        BiomeGenBase.icePlains.setBiomeName("Dino - PlainsI");
-        BiomeGenBase.icePlains.temperature = 2.0F;
-        BiomeGenBase.icePlains.rainfall = 2.0F;
-
-        BiomeGenBase.plains.setColor(16421912);
-        BiomeGenBase.plains.waterColorMultiplier = 39219;
-        BiomeGenBase.plains.setBiomeName("Dino - Plains");
-        BiomeGenBase.plains.temperature = 2.0F;
-        BiomeGenBase.plains.rainfall = 2.0F;
 
         GameRegistry.registerBlock(blockHugeThinTreeLog1, "blockhugeThinTreeLog1");
         GameRegistry.registerBlock(blockHugeThinTreeLog2, "blockhugeThinTreeLog2");

@@ -1,5 +1,6 @@
 package fr.terranova.flv92.dinosaurus.common;
 
+import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPortal;
 import net.minecraft.entity.Entity;
@@ -93,7 +94,7 @@ public class BlockTerraNovaPortal extends BlockPortal {
      * neighbor blockID
      */
     public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5) {
-        if(1==1)
+        if (1 == 1)
         {
             return;
         }
@@ -164,4 +165,7 @@ public class BlockTerraNovaPortal extends BlockPortal {
             }
         }
     }
+
+    @Override
+    public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random) {}
 }
